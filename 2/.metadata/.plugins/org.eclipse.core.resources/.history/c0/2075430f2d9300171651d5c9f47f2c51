@@ -1,0 +1,31 @@
+import java.util.*;
+public class fibonacci_Dynamique {
+Vector<Integer> memo;
+final private static int M=500;
+
+public fibonacci_Dynamique() {
+	super();
+	this.memo =new Vector<Integer>(500);
+	memo.setSize(M);
+	memo.set(0, 0);
+	memo.set(1, 1);
+}
+public int calculate(int n){
+	int result;
+	if(n>memo.size()){
+		memo.setSize(2*n);
+		result=calculate(n-1)+calculate(n-2);
+		this.memo.set(n, new Integer(result));
+		return result;
+	}
+	if(this.memo.get(n)==null){
+		result=calculate(n-1)+calculate(n-2);
+		this.memo.set(n, new Integer(result));
+		return result;
+	}
+	return memo.get(n).intValue();
+	
+}
+
+
+}

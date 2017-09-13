@@ -1,0 +1,12 @@
+
+public class test {
+
+	public static void main(String[] args) {
+		fibonacci_Dynamique f=new fibonacci_Dynamique();
+		int a=f.calculate(3);
+		System.out.println(a);
+		
+
+	}
+
+}

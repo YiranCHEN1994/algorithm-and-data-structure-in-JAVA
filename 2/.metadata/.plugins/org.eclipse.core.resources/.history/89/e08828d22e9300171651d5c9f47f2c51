@@ -1,0 +1,23 @@
+import java.util.HashMap;
+public class fibonacci_memo {
+HashMap<Integer,Integer> memo;
+
+public fibonacci_memo() {
+	super();
+	this.memo = new HashMap<Integer, Integer>();
+	memo.put(0, 0);
+	memo.put(1, 1);
+}
+public int calculate(int n){
+	int result;
+	if(memo.containsKey(n))return memo.get(n).intValue();
+	result=calculate(n-1)+calculate(n-2);
+	memo.put(n, result);
+	return result;
+	
+	
+	
+}
+
+
+}

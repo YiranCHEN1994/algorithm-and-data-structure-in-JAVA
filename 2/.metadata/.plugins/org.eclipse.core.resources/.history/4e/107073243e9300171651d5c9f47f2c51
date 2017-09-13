@@ -1,0 +1,15 @@
+
+public class test {
+
+	public static void main(String[] args) {
+		fibonacci_memo f=new fibonacci_memo();
+		for(int i=0;i<600;i++){
+			long a=f.calculate(i);
+			System.out.println(a);
+		}
+		
+		
+
+	}
+
+}

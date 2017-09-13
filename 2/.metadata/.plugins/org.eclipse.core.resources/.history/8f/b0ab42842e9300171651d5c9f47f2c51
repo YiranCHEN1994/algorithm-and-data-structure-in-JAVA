@@ -1,0 +1,12 @@
+
+public class test {
+
+	public static void main(String[] args) {
+		fibonacci_memo f=new fibonacci_memo();
+		long a=f.calculate(501);
+		System.out.println(a);
+		
+
+	}
+
+}
